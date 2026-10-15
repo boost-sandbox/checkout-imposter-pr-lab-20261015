@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v6.1.0
+        uses: actions/checkout@373d742f768e37e4e68d84ada06be93fb2ce64d8
         with:
           persist-credentials: false
       - name: Confirm checkout
