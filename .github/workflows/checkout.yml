@@ -1,0 +1,19 @@
+name: Checkout lockfile control
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  control:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6.1.0
+        with:
+          persist-credentials: false
+      - name: Confirm checkout
+        run: test -f README.md
